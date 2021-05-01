@@ -1,1 +1,6 @@
 Media/Textures/Desert.png
+Media/Textures/AmWatson1.jpg
+Media/Textures/AmWatson2.jpg
+Media/Textures/Gawr1.jpg
+Media/Textures/Gawr2.jpg
+Media/Textures/Inanis1.jpg

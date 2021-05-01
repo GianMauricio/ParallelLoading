@@ -36,7 +36,7 @@ void ThreadPool::run()
 		}
 		else
 		{
-			std::cout << "[Threadpool " << this->name << " Has no pending tasks" << std::endl;
+			//std::cout << "[Threadpool " << this->name << " Has no pending tasks" << std::endl;
 		}
 	}
 }

@@ -38,6 +38,7 @@ void BGObject::update(sf::Time deltaTime)
 		//reset position
 		this->setPosition(0, -BaseRunner::WINDOW_HEIGHT * 7);
 	}
+	
 	else {
 		
 	}
