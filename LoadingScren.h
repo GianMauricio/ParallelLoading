@@ -15,11 +15,17 @@ private:
 	//sf::Sprite* sprite;
 	float upTime = 0;
 	int currPic = 0;
+	float fadeTime = 5;
+	sf::Time timeFading = sf::Time::Zero;
+
+	void fadeOut(sf::Time deltaTime);
 public:
 	LoadingScren(std::string name);
 	
 	void initialize();
 	void processInput(sf::Event event);
 	void update(sf::Time deltaTime);
+
+	
 };
 

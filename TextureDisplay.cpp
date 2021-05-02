@@ -42,10 +42,11 @@ void TextureDisplay::spawnObject()
 {
 	String objectName = "Icon_" + to_string(this->iconList.size());
 	IconObject* iconObj = new IconObject(objectName, this->iconList.size() % MAX_ICONS);
+	iconObj->setActive(false);
 	this->iconList.push_back(iconObj);
 
 	//set position
-	int IMG_WIDTH = 68; int IMG_HEIGHT = 68;
+	int IMG_WIDTH = 192; int IMG_HEIGHT = 108;
 	float x = this->columnGrid * IMG_WIDTH;
 	float y = this->rowGrid * IMG_HEIGHT;
 	iconObj->setPosition(x, y);
@@ -59,4 +60,15 @@ void TextureDisplay::spawnObject()
 		this->rowGrid++;
 	}
 	GameObjectManager::getInstance()->addObject(iconObj);
+
+	//If all icons done then set all to active
+	if(this->iconList.size() >= 41)
+	{
+		GameObjectManager::getInstance()->findObjectByName("LoadingScreen")->setFade();
+		for (AGameObject* icon : this->iconList)
+		{
+			icon->setFade();
+			icon->setActive(true);
+		}
+	}
 }

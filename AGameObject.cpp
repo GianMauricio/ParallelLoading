@@ -15,7 +15,7 @@ AGameObject::String AGameObject::getName() {
 }
 
 void AGameObject::draw(sf::RenderWindow* targetWindow) {
-	if (this->sprite != NULL) {
+	if (this->sprite != NULL && this->isActive) {
 		this->sprite->setPosition(this->posX, this->posY);
 		this->sprite->setScale(this->scaleX, this->scaleY);
 		targetWindow->draw(*this->sprite);
@@ -45,6 +45,11 @@ void AGameObject::setScale(float x, float y)
 	}
 }
 
+void AGameObject::setOpacity(float newOp)
+{
+	this->sprite->setColor(sf::Color(255, 255, 255, newOp));
+}
+
 sf::Vector2f AGameObject::getPosition()
 {
 	return this->sprite->getPosition();
@@ -53,6 +58,17 @@ sf::Vector2f AGameObject::getPosition()
 sf::Vector2f AGameObject::getScale()
 {
 	return this->sprite->getScale();
+}
+
+void AGameObject::setActive(bool state)
+{
+	this->isActive = state;
+}
+
+void AGameObject::setFade()
+{
+	this->isFadingOut = true;
+	this->isFadingIn = true;
 }
 
 sf::FloatRect AGameObject::getLocalBounds()

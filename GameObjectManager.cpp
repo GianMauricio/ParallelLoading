@@ -18,6 +18,7 @@ AGameObject* GameObjectManager::findObjectByName(AGameObject::String name)
 	if (this->gameObjectMap[name] != NULL) {
 		return this->gameObjectMap[name];
 	}
+	
 	else {
 		std::cout << "Object " << name << " not found!";
 		return NULL;
@@ -78,6 +79,7 @@ void GameObjectManager::deleteObject(AGameObject* gameObject)
 
 	if (index != -1) {
 		this->gameObjectList.erase(this->gameObjectList.begin() + index);
+		this->gameObjectList.shrink_to_fit();
 	}
 	
 	delete gameObject;

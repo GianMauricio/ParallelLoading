@@ -17,15 +17,15 @@ BaseRunner::BaseRunner() :
 	TextureManager::getInstance()->loadFromAssetList();
 
 	//load objects
-	//TextureDisplay* display = new TextureDisplay();
-	//GameObjectManager::getInstance()->addObject(display);
+	TextureDisplay* display = new TextureDisplay();
+	GameObjectManager::getInstance()->addObject(display);
 	
-	//BGObject* bgObject = new BGObject("BGObject");
-	//GameObjectManager::getInstance()->addObject(bgObject);
+	BGObject* bgObject = new BGObject("BGObject");
+	GameObjectManager::getInstance()->addObject(bgObject);
 
-	LoadingScren* loadScreen = new LoadingScren("loadingUp");
+	LoadingScren* loadScreen = new LoadingScren("LoadingScreen");
 	GameObjectManager::getInstance()->addObject(loadScreen);
-
+	
 	FPSCounter* fpsCounter = new FPSCounter();
 	GameObjectManager::getInstance()->addObject(fpsCounter);
 }

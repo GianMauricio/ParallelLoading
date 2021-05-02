@@ -24,6 +24,7 @@ void BGObject::initialize()
 
 void BGObject::processInput(sf::Event event)
 {
+	
 }
 
 void BGObject::update(sf::Time deltaTime)

@@ -76,6 +76,7 @@ int TextureManager::getNumFrames(const String assetName)
 	if (!this->textureMap[assetName].empty()) {
 		return this->textureMap[assetName].size();
 	}
+	
 	else {
 		std::cout << "[TextureManager] No texture found for " << assetName << std::endl;
 		return 0;
