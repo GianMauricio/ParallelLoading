@@ -1,6 +1,7 @@
 Media/Textures/Desert.png
-Media/Textures/AmWatson1.jpg
-Media/Textures/AmWatson2.jpg
-Media/Textures/Gawr1.jpg
-Media/Textures/Gawr2.jpg
-Media/Textures/Inanis1.jpg
+Media/Textures/VW1.jpg
+Media/Textures/VW2.jpg
+Media/Textures/VW3.jpg
+Media/Textures/VW4.jpg
+Media/Textures/VW5.jpg
+Media/Textures/VW6.png
